@@ -169,21 +169,4 @@ mainAccountPageInitialLoad($connection);
 
 <script src="./../../assets/js/account.js"></script>
 
-<script>
-  document.getElementById("logout-btn").addEventListener("click", async function() {
-    const send = {
-      "LOGOUT_REQ": true
-    };
-    const req = await fetch("./../auth/logout_auth.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(send),
-    });
-    const json = await req.json();
-    console.log(json);
-  });
-</script>
-
 </html>
