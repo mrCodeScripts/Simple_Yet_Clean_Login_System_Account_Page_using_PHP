@@ -1,0 +1,25 @@
+FEATURES:
+    📌 Login | Signup
+    📌 Create account
+    📌 Edit user account informations
+    📌 Add user account profile picture 
+    📌 Change color themes
+
+
+SESSION STRUCTURE:
+[
+    "UUID" => "",
+    "ACC_INF" => [
+        "Firstname" => "",
+        "Lastname" => "",
+        "Birthdate" => "",
+        "Age" => "",
+        "Bio" => "",
+        "Gender" => "",
+        "Profile_Image" => [
+            "id" => "",
+            "path" => ""
+            "date" => "",
+        ]
+    ],
+]

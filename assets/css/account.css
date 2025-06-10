@@ -1,0 +1,329 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  padding: 0 0 100px 0;
+}
+
+body > h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+}
+
+.upload-profile-img-bg {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: var(--dark-color-faded);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  will-change: visibility, opacity;
+}
+
+.close-upload-profile-img {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.upload-profile-img-bg .upload-profile-img-input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  max-width: 400px;
+  min-height: 100px;
+  max-height: fit-content;
+  border-radius: 20px;
+  z-index: 120;
+  background-color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 30px;
+  gap: 30px;
+}
+
+.upload-profile-img-input input[type="file"] {
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid var(--dark-color-faded);
+  transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    offset-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  will-change: background-color;
+  outline-offset: 3px;
+  outline: 2px solid transparent;
+}
+
+.upload-profile-img-input input[type="file"]:hover,
+.upload-profile-img-input input[type="file"]:focus,
+.upload-profile-img-input input[type="file"]:focus-within {
+  background-color: var(--info-color);
+  outline-color: var(--info-color);
+}
+
+.upload-profile-img-input .upload-action-btns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-action-btns button[type="submit"],
+.upload-action-btns button[type="button"] {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--light-color);
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  will-change: transform;
+}
+
+.upload-action-btns #upload-btn {
+  background-color: var(--success-color);
+}
+
+.upload-action-btns #close-btn {
+  background-color: var(--dark-color);
+}
+
+.upload-action-btns button[type="submit"]:hover,
+.upload-action-btns button[type="submit"]:focus,
+.upload-action-btns button[type="submit"]:focus-within,
+.upload-action-btns button[type="button"]:hover,
+.upload-action-btns button[type="button"]:focus,
+.upload-action-btns button[type="button"]:focus-within {
+  transform: scale(0.94);
+}
+
+.account-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 50px;
+}
+
+.account-wrapper .account-left-section {
+  width: 100%;
+  height: fit-content;
+}
+
+.account-left-section .user-profile-img {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
+.user-profile-img .img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.img .edit-img {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  overflow: hidden;
+  right: 0;
+  bottom: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.edit-img .edit-icon {
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-color);
+  padding: 5px;
+}
+
+.edit-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--info-color);
+}
+
+.account-right-section {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.account-right-section .details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.details > h1 {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.user-basic-details .basic-detail,
+.user-contact-details .contact-detail,
+.user-personal-details .personal-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.basic-detail .basic-detail-label,
+.contact-detail .contact-detail-label,
+.personal-detail .personal-detail-label {
+  font-weight: 500;
+}
+
+.basic-detail .basic-detail-info,
+.contact-detail .contact-detail-info,
+.personal-detail .personal-detail-info {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.basic-detail-info input,
+.basic-detail-info select,
+.contact-detail-info input,
+.contact-detail-info select,
+.personal-detail-info input,
+.personal-detail-info select {
+  width: 100%;
+  padding: 20px;
+  font-size: 1em;
+  border-radius: 10px;
+  border: 1px solid var(--dark-color-faded);
+  background-color: transparent;
+  outline: 2px solid transparent;
+  transition: outline-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  will-change: outline-color;
+}
+
+.basic-detail-info input:hover,
+.basic-detail-info input:focus,
+.basic-detail-info input:focus-within,
+.basic-detail-info select:hover,
+.basic-detail-info select:focus,
+.basic-detail-info select:focus-within,
+.contact-detail-info input:hover,
+.contact-detail-info input:focus,
+.contact-detail-info input:focus-within,
+.contact-detail-info select:hover,
+.contact-detail-info select:focus,
+.contact-detail-info select:focus-within,
+.personal-detail-info input:hover,
+.personal-detail-info input:focus,
+.personal-detail-info input:focus-within,
+.personal-detail-info select:hover,
+.personal-detail-info select:focus,
+.personal-detail-info select:focus-within {
+  outline-color: var(--info-color);
+}
+
+.basic-detail .choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.choices .choice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 10px;
+  border: 1px solid var(--dark-color-faded);
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+  will-change: background-color;
+}
+
+.choice input[type="radio"] {
+  border: none !important;
+  outline: none !important;
+}
+
+.choice:has(input[type="radio"]:checked) {
+  background-color: var(--dark-color-faded);
+}
+
+.action-btns {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  gap: 10px;
+}
+
+.action-btns button[type="submit"],
+.action-btns a {
+  padding: 20px;
+  font-size: 1.1em;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 1px solid var(--dark-color-faded);
+  outline: 1px solid transparent;
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  will-change: transform;
+}
+
+.action-btns button[type="button"]:hover,
+.action-btns button[type="button"]:focus,
+.action-btns button[type="button"]:focus-within,
+.action-btns button[type="submit"]:hover,
+.action-btns button[type="submit"]:focus,
+.action-btns button[type="submit"]:focus-within {
+  transform: scale(0.94);
+}
+
+.action-btns #save-btn {
+  background-color: var(--success-color);
+  color: var(--light-color) !important;
+}
+
+.action-btns #logout-btn {
+  background-color: var(--error-color);
+  color: var(--light-color);
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --main-font: "Inter", sans-serif;
+  --light-color: #FFF;
+  --light-color-faded: rgba(255, 255, 255, 0.94);
+  --dark-color: #121212;
+  --dark-color-faded: rgba(0, 0, 0, 0.3);
+  --success-color: #198754;
+  --info-color: #3b82f6;
+  --error-color: #ff3333;
+}
+
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, a {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  -webkit-touch-callout: none;
+  outline: none;
+}
+
+button, a {
+  user-select: none;
+  -webkit-user-select: none;
+}

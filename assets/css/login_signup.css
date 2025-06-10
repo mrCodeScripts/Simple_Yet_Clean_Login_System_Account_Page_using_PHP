@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-dark-color-1);
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  /* max-height: 500px; */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  border-radius: 50px;
+  position: relative;
+}
+
+form .introduction {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form .introduction h1 {
+  color: var(--dark-color);
+  font-family: var(--main-font);
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+form .introduction h4 {
+  color: var(--dark-color);
+  font-family: var(--main-font);
+  text-align: center;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+form .input-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+  min-height: 60px;
+  overflow: hidden;
+  border: 2px solid var(--dark-color-faded);
+  background-color: var(--dark-color-faded);
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  background-color: var(--light-color);
+  padding: 20px;
+  font-family: var(--main-font);
+  font-size: 1em;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
+
+.input-wrapper input[type='password']::-ms-reveal {
+  display: none;
+}
+
+.input-wrapper .input-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 20px;
+}
+
+.input-icon > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.input-icon .password-switch {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.password-switch .hidden {
+  opacity: 0;
+}
+
+.password-switch .eye-open,
+.password-switch .eye-close {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.eye-open svg,
+.eye-close svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--dark-color);
+}
+
+form button[type='submit'] {
+  padding: 20px;
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 1.2em;
+  color: var(--light-color);
+  background-color: var(--dark-color);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid var(--dark-color-faded);
+  transition: color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  will-change: color, background-color;
+  user-select: none;
+}
+
+form button[type='submit']:hover,
+form button[type='submit']:focus,
+form button[type='submit']:focus-within {
+  background-color: var(--success-color);
+  color: var(--light-color);
+}
+
+form .last-option {
+  text-align: center;
+  font-family: var(--main-font);
+}
+
+.last-option a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--success-color);
+}
