@@ -3,7 +3,6 @@ FEATURES:
     📌 Create account
     📌 Edit user account informations
     📌 Add user account profile picture 
-    📌 Change color themes
 
 
 SESSION STRUCTURE:
